@@ -42,7 +42,7 @@ class Validator{
 		if(empty($val)){
 			$this->AddError('email', 'Поле email не может быть пустым');
 		} else{
-			if(!filter_var($val, FILTER_VALIDATE_EMAIL)){ //проверяет, что email в корректной форме, 
+			if(!filter_var($val, FILTER_VALIDATE_EMAIL)){ //встроенная ф-ция проверяет, что email в корректной форме, 
 				$this->AddError('email', 'email заполнен не корректно'); // если не в корректной, записываем ошибку
 			}
 
